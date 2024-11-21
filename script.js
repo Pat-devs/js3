@@ -78,8 +78,27 @@ function displayData(someData) {
 }
 
 
-displayData("the sum of 2 and 34 is " + sum(2,34))
+//displayData("the sum of 2 and 34 is " + sum(2,34))
 
-console.log(
-    sum(sum(2,sum(sum(2,34),34)),34)
-)
+
+// positive number, function only prints message if number is above 0
+function positiveNum(number) {
+    // truthy values, generally things that are not "empty"
+    // f.eks: "" is false
+    // " " is true (Because it contains something)
+    // numbers....
+    // 0 is falsy
+    // but negative numbers and positive numbers are both "truthy"
+
+    // check if number is greater than 0
+    if (number > 0) {
+        console.log("Your number is positive! :)")
+        // if the above condition is "truthy" then the code inside this block will run
+    }
+    // code below here will run regardless of the above condition evaluation
+    //console.log("code executes regardless")
+
+    //console.log("Nice, the number is positive :)")
+}
+
+positiveNum(2)
