@@ -36,3 +36,11 @@ function sub(numberA, numberB) {
 //sub(2, 3)
 
 
+// sum takes two numbers and prints out the sum
+function sumHtml(numberA, numberB) {
+    let sum = numberA + numberB
+
+    document.body.textContent = "The sum is " + sum
+}
+
+sumHtml(5, 50)
