@@ -97,8 +97,52 @@ function positiveNum(number) {
     }
     // code below here will run regardless of the above condition evaluation
     //console.log("code executes regardless")
-
-    //console.log("Nice, the number is positive :)")
 }
 
-positiveNum(2)
+//positiveNum(2)
+
+
+let isUserAnAdmin = true
+let isUserRegistered = true
+let isUserBanned = false
+
+if (!isUserBanned) { // !isUserBanned is the same as saying isUserBanned == truenot banned 
+    console.log("user is not banned ")
+    if (isUserRegistered) {
+        console.log("user is registered")
+        if (isUserAnAdmin) {
+            console.log("user is an Admin")
+        }
+    }
+}
+
+
+// combine several conditional statements:
+
+// #1. Logical AND operator &&
+
+// #2. Logical OR operator ||
+
+if (isUserAnAdmin && isUserRegistered && !isUserBanned) {
+    console.log("user is both an admin, is registered and is not banned!")
+}
+
+let temperature = 23
+
+/* if (temperature >= 35) {
+    console.log("It's very hot today!")
+}
+else if (temperature >= 20) {
+    console.log("temperature is perfectly fine today")
+}
+else if (temperature >= 15) {
+    console.log("its a littlebit too cold today")
+}
+else {
+    console.log("its too cold today")
+} */
+
+// check if temperature is between 20 and 22 degrees
+if (temperature >= 20 && temperature <= 22) {
+    console.log("temperature is between 20 and 22 degrees")
+}
