@@ -60,10 +60,12 @@ function sumHtml(numberA, numberB) {
 // #3. i wish to hava a function that can display the given argument on the console
 
 function sum(numberA, numberB) {
-    let sum = numberA + numberB
+    //let sumResult = numberA + numberB
 
-    return sum
+    return numberA + numberB
 }
+
+
 
 //console.log(sum(2,34))
 
@@ -79,5 +81,5 @@ function displayData(someData) {
 displayData("the sum of 2 and 34 is " + sum(2,34))
 
 console.log(
-    sum(2,34)
+    sum(sum(2,sum(sum(2,34),34)),34)
 )
