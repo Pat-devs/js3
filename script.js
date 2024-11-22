@@ -146,3 +146,6 @@ else {
 if (temperature >= 20 && temperature <= 22) {
     console.log("temperature is between 20 and 22 degrees")
 }
+
+
+
