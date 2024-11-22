@@ -124,6 +124,7 @@ for (let i = 0; i < names.length; i++) {
 
     //console.log(`The name at index ${i} is ${currentName}`)
 
-
-    peopleContainerElement.textContent += ", " + currentName
+    if (currentName != "Otto") {
+        peopleContainerElement.textContent += ", " + currentName
+    }
 }
