@@ -56,15 +56,15 @@ let myText = "lorem ipsum"
 // charAt returns char at given index:
 //console.log(myText.charAt(10)) // 10th (or last character)
 
-console.log(myText.charAt(0))
+//console.log(myText.charAt(0))
 
 // length/count almost always begins at 1 (for the first character) 
-console.log(myText.charAt(myText.length - 1))
+//console.log(myText.charAt(myText.length - 1))
 
 // Shorthand alternative to .charAt is using [index]:
-console.log(myText[0])
+//console.log(myText[0])
 // get the last character in a string using the [] with the .length attribute:
-console.log(myText[myText.length - 1])
+//console.log(myText[myText.length - 1])
 
 
 let mytext1 = "hei "
@@ -72,6 +72,37 @@ let someothertext = "abcdef"
 
 let combinedStrings = mytext1.concat(someothertext) // mytext1 + someothertext
 
-console.log(combinedStrings)
+//console.log(combinedStrings)
 
 //myText.concat()
+
+
+// Arrays:
+
+let myArray = ["text, blablabla", "mer text!", 1234, -234, 0.341]
+
+// to get the first element in the array use [index] (similar to how we did with strings) 
+console.log(myArray[0])
+
+console.log(myArray[myArray.length - 1])
+
+
+let names = [
+    "Thomas",
+    "Susan",
+    "Monica",
+    "Avery",
+    "Phillip",
+    "Otto",
+    "Annabelle",
+    "Cathy"
+]
+
+//console.log(names)
+
+// Get the people-container html element
+
+let peopleContainerElement = document.querySelector("#people-container")
+
+peopleContainerElement.textContent = "navn1"
+peopleContainerElement.textContent += "navn2"
