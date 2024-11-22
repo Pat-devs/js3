@@ -45,5 +45,33 @@ for (let i = 0; i <= 5; i++) {
 for (let i = 50; i >= 10; i--) {
     //console.log("count is now: " + i)
 
-    break
+    //break
 }
+
+// some text:
+let myText = "lorem ipsum"
+
+// indexes almost always begin at 0 (f.eks charAt uses a such index)
+
+// charAt returns char at given index:
+//console.log(myText.charAt(10)) // 10th (or last character)
+
+console.log(myText.charAt(0))
+
+// length/count almost always begins at 1 (for the first character) 
+console.log(myText.charAt(myText.length - 1))
+
+// Shorthand alternative to .charAt is using [index]:
+console.log(myText[0])
+// get the last character in a string using the [] with the .length attribute:
+console.log(myText[myText.length - 1])
+
+
+let mytext1 = "hei "
+let someothertext = "abcdef"
+
+let combinedStrings = mytext1.concat(someothertext) // mytext1 + someothertext
+
+console.log(combinedStrings)
+
+//myText.concat()
