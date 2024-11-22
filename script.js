@@ -98,10 +98,10 @@ let peopleContainerElement = document.querySelector("#people-container")
 let names = [
     "Thomas",
     "Susan",
+    "Otto",
     "Monica",
     "Avery",
     "Phillip",
-    "Otto",
     "Annabelle",
     "Cathy"
 ]
@@ -117,14 +117,90 @@ peopleContainerElement.textContent += ", " + names[5]
 peopleContainerElement.textContent += ", " + names[16]
 peopleContainerElement.textContent += ", " + names[17] */
 
-for (let i = 0; i < names.length; i++) {
-    //console.log(i)
+// Loop through all names in the names array
+/* for (let i = 0; i < names.length; i++) {
+
 
     let currentName = names[i]
+    
+    
+    // Skip Monica
+    if (currentName == "Monica") {
+        continue    
+    }
 
-    //console.log(`The name at index ${i} is ${currentName}`)
-
+    // Skip Otto
     if (currentName != "Otto") {
         peopleContainerElement.textContent += ", " + currentName
     }
+
+    // If Philip is present, stop printing
+    if (currentName == "Phillip") {
+        break
+    }
+
+    
+}
+ */
+
+// For of loop (forloop av et array)
+
+
+for (let i = names.length - 1; i >= 0; i--)
+
+for (let currentName of names) {
+    // Skip Monica
+    if (currentName == "Monica") {
+        continue    
+    }
+
+    // Skip Otto
+    if (currentName != "Otto") {
+        peopleContainerElement.textContent += ", " + currentName
+    }
+
+    // If Philip is present, stop printing
+    if (currentName == "Phillip") {
+        break
+    }
+}
+
+
+
+let people = [
+    {
+      name: "Tracie Adams",
+      age: 37,
+      location: "north"
+    },
+    {
+      name: "Gale Beasley",
+      age: 26,
+      location: "south"
+    },
+    {
+      name: "Allison Boone",
+      age: 24,
+      location: "north"
+    },
+    {
+      name: "Dina Douglas",
+      age: 28,
+      location: "west"
+    },
+    {
+      name: "Goff Haynes",
+      age: 23,
+      location: "east"
+    },
+    {
+      name: "Shannon Tyson",
+      age: 40,
+      location: "west"
+    }
+  ]
+
+
+for (let person of people) {
+    //console.log(`Hi my name is ${person.name}, i am ${person.age} years old, and i am from ${person.location}.`)
 }
