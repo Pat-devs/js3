@@ -87,6 +87,14 @@ console.log(myArray[0])
 console.log(myArray[myArray.length - 1])
 
 
+
+
+//console.log(names)
+
+// Get the people-container html element
+
+let peopleContainerElement = document.querySelector("#people-container")
+
 let names = [
     "Thomas",
     "Susan",
@@ -98,11 +106,24 @@ let names = [
     "Cathy"
 ]
 
-//console.log(names)
+// Print each name to the peopleContainer
 
-// Get the people-container html element
+/* peopleContainerElement.textContent = names[0]
+peopleContainerElement.textContent += ", " + names[1]
+peopleContainerElement.textContent += ", " + names[2]
+peopleContainerElement.textContent += ", " + names[3]
+peopleContainerElement.textContent += ", " + names[4]
+peopleContainerElement.textContent += ", " + names[5]
+peopleContainerElement.textContent += ", " + names[16]
+peopleContainerElement.textContent += ", " + names[17] */
 
-let peopleContainerElement = document.querySelector("#people-container")
+for (let i = 0; i < names.length; i++) {
+    //console.log(i)
 
-peopleContainerElement.textContent = "navn1"
-peopleContainerElement.textContent += "navn2"
+    let currentName = names[i]
+
+    //console.log(`The name at index ${i} is ${currentName}`)
+
+
+    peopleContainerElement.textContent += ", " + currentName
+}
