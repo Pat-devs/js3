@@ -1,52 +1,99 @@
+let VARIABELnavn = (( "hei"))
 
+let variabelNavn = "abc"
 
+const courseStartYear = 2024
 
-let people = [
-    {
-      name: "Tracie Adams",
-      age: 37,
-      location: "north"
-    },
-    {
-      name: "Gale Beasley",
-      age: 26,
-      location: "south"
-    },
-    {
-      name: "Allison Boone",
-      age: 24,
-      location: "north"
-    },
-    {
-      name: "Dina Douglas",
-      age: 28,
-      location: "west"
-    },
-    {
-      name: "Goff Haynes",
-      age: 23,
-      location: "east"
-    },
-    {
-      name: "Shannon Tyson",
-      age: 40,
-      location: "west"
+let weight = 0.345;
+
+let users = ["Patryk", "Erik"]
+
+let randomThings = [153, "Bil", 0.345, console.log]
+
+/* let playerPer = {
+    name: "Per",
+    score: 1234,
+    greet() {
+        console.log("Hi my name is " + playerPer.name )
     }
-]
-
-// get the people-container element:
-
-let peopleContainerElement = document.getElementById("people-container")
-
-for (let person of people) {
-    //console.log(`Hi my name is ${person.name}, i am ${person.age} years old, and i am from ${person.location}.`)
+}
 
 
-    peopleContainerElement.innerHTML += `
-    <div class="">
-        <h3>${person.name}</h3>
-        <p>${person.age} years old from ${person.location}</p>
-    </div>
-    `
+// vi ønsker flere spillere
+
+let playerAnna = {
+    name: "Anna",
+    score: 1235,
+    greet() {
+        console.log("Hi my name is " + this.name )
+    }
+}
+
+let playerBob = {
+    name: "Bob",
+    score: 1,
+    greet() {
+        console.log("Hi my name is " + this.name )
+    }
+} */
+
+//console.log(playerAnna.score)
+
+// Klasser er "blueprints" for objects
+
+/* Ønsket blueprint
+{
+    name (string)
+    score (integer)
+    greet() (skal bare skrive ut navn og score)
+}
+*/
+
+let variableA = "test"
+
+//console.log("Can we access variableA? " + variableA)
+
+function doNothing() {
+    let variableB = "HEI"
+    
+    //console.log("Can we access variableA inside a function score? " + variableA)
 
 }
+
+//console.log("variableB is " + variableB)
+
+//doNothing()
+ 
+
+class Player {
+
+    // instance attributes:
+    name = "";
+    score = 0;
+    // constructor er en spesiell metode som kjøres KUN når vi "lager" en "instance" av klasses
+    constructor(name, score) {
+        console.log("received arguments: " + name + " and " + score)
+        console.log("Player instance created!")
+
+        // vi må oppdatere this.ATTRIBUTE-NAME til de vi mottar i "constructoren",
+        // fordi, instance properties akseseres vha. this.NAVN, ikke constructors(NAVN).
+
+        this.name = name
+        this.score = score
+    }
+
+}
+
+// #1. for å lage en instance av en "player":
+// kjør: new Player()
+
+//console.log( new Player("Per", 100) )
+
+let playerPer = new Player("Per", 100)
+
+//console.log(playerPer)
+
+let anotherPlayer = new Player("Bob", 1)
+
+console.log("Per has score of: " + playerPer.score)
+console.log("Bob has score of: " + anotherPlayer.score)
